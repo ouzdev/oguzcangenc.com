@@ -1,2 +1,2 @@
 # oguzcangenc.com
-My Personel Web Site
+My Personel Web Site 
