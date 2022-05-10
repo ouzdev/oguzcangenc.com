@@ -11,17 +11,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Oğuzcan Genç'in kişisel web sitesi. Sitemde CV, iş deneyimlerim, projelerim ve hakkımdaki bilgilere ulaşabilirsiniz. Ayrıca teknik konuları ele aldığım blog sitemide ziyaret edebilirsiniz.">
+    <meta name="description"
+        content="Oğuzcan Genç'in kişisel web sitesi. Sitemde CV, iş deneyimlerim, projelerim ve hakkımdaki bilgilere ulaşabilirsiniz. Ayrıca teknik konuları ele aldığım blog sitemide ziyaret edebilirsiniz.">
     <meta name="author" content="Oğuzcan Genç">
     <link rel="shortcut icon" href="favicon.ico">
     <link href='assets/css/googlefontlato.css' rel='stylesheet' type='text/css'>
     <link href='assets/css/googlefontmontserrat.css' rel='stylesheet' type='text/css'>
     <!-- FontAwesome JS -->
     <script defer src="assets/fontawesome/js/all.js"></script>
-    <link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet"> 
+    <link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet">
     <!--Intro.Js-->
     <!-- Global CSS -->
-    
+
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
 
     <!-- github calendar css -->
@@ -47,11 +48,16 @@
                         <h1 class="name">Oğuzcan Genç</h1>
                         <h2 class="desc">Web Application Developer</h2>
                         <ul class="social list-inline">
-                            <li class="list-inline-item"><a href="https://medium.com/@oguzcangenc"><i class="fab fa-medium"></i></a></li>
-                            <li class="list-inline-item"><a href="https://twitter.com/ouzdev_"><i class="fab fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/oguzcan-genc/"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li class="list-inline-item"><a href="https://github.com/ouzdev"><i class="fab fa-github"></i></a></li>
-                            <li class="list-inline-item"><a href="https://stackoverflow.com/users/12813338/ouzdev"><i class="fab fa-stack-overflow"></i></a></li>
+                            <li class="list-inline-item"><a href="https://medium.com/@oguzcangenc"><i
+                                        class="fab fa-medium"></i></a></li>
+                            <li class="list-inline-item"><a href="https://twitter.com/ouzdev_"><i
+                                        class="fab fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/oguzcan-genc/"><i
+                                        class="fab fa-linkedin-in"></i></a></li>
+                            <li class="list-inline-item"><a href="https://github.com/ouzdev"><i
+                                        class="fab fa-github"></i></a></li>
+                            <li class="list-inline-item"><a href="https://stackoverflow.com/users/12813338/ouzdev"><i
+                                        class="fab fa-stack-overflow"></i></a></li>
                         </ul>
                     </div>
                     <!--//profile-->
@@ -60,12 +66,14 @@
                 <div class="col-12 col-md-auto">
                     <div class="dark-mode-switch d-flex">
                         <div class="form-check form-switch mx-auto mx-md-0">
-                            <input type="checkbox" class="form-check-input me-2" id="darkSwitch"  data-intro='Karanlık mod' />
+                            <input type="checkbox" class="form-check-input me-2" id="darkSwitch"
+                              data-title="Öneri"  data-intro='✨ Daha iyi bir deneyim için karanlık modu açın' />
                             <label class="custom-control-label" for="darkSwitch">Karanlık Mod</label>
                         </div>
                     </div>
                     <!--//dark-mode-switch-->
-                    <a class="btn btn-cta-primary btn-download" href="https://oguzcangenc.com/blog" target="_blank"><i class="fas fa-pen-nib"></i>BLOG</a>
+                    <a class="btn btn-cta-primary btn-download" href="https://oguzcangenc.com/blog" target="_blank"><i
+                            class="fas fa-pen-nib"></i>BLOG</a>
                     <a class="btn btn-cta-primary btn-download" href="#" target="_blank"><i
                             class="fas fa-download"></i>Download CV</a>
 
@@ -214,7 +222,8 @@
                                     <h6 class="level-title">JavaScript, Angular, ReactJS</h6>
                                 </div>
 
-                                <p><a class="more-link" href="https://github.com/ouzdev"><i class="fas fa-external-link-alt"></i>Daha Fazlası
+                                <p><a class="more-link" href="https://github.com/ouzdev"><i
+                                            class="fas fa-external-link-alt"></i>Daha Fazlası
                                         İçin GitHub'a Git</a></p>
                             </div>
                         </div>
@@ -271,7 +280,7 @@
     <!--//footer-->
 
     <!-- Javascript -->
- 
+
     <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
     <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -285,8 +294,27 @@
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script>
-        introJs().setOption(true).start();
-</script>
+        var introguide = introJs();
+
+
+        window.addEventListener('load', function () {
+            var doneTour = localStorage.getItem('EventTour') === 'Completed';
+            if (doneTour) {
+                return;
+            }
+            else {
+                introguide.start()
+
+                introguide.oncomplete(function () {
+                    localStorage.setItem('EventTour', 'Completed');
+                });
+
+                introguide.onexit(function () {
+                    localStorage.setItem('EventTour', 'Completed');
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
