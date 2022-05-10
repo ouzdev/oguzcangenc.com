@@ -72,10 +72,10 @@
                         </div>
                     </div>
                     <!--//dark-mode-switch-->
-                    <a class="btn btn-cta-primary btn-download" href="https://oguzcangenc.com/blog" target="_blank"><i
+                    <a class="btn btn-cta-primary btn-download" data-title="Blog"  data-intro="📚 Buradan blog yazılarıma ulaşabilirsin." href="https://oguzcangenc.com/blog" target="_blank"><i
                             class="fas fa-pen-nib"></i>BLOG</a>
-                    <a class="btn btn-cta-primary btn-download" href="#" target="_blank"><i
-                            class="fas fa-download"></i>Download CV</a>
+                    <a class="btn btn-cta-primary btn-download" href="#" data-title="CV"  data-intro="📄 Buradan CV'mi indirebilirsin." target="_blank"><i
+                            class="fas fa-download" ></i>Download CV</a>
 
                 </div>
                 <!--//col-->
@@ -295,6 +295,11 @@
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script>
         var introguide = introJs();
+        introguide.setOption("nextLabel", " İleri ");
+        introguide.setOption("prevLabel", " Geri ");
+        introguide.setOption("doneLabel", " Bitir ");
+
+        
 
 
         window.addEventListener('load', function () {
