@@ -16,11 +16,12 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link href='assets/css/googlefontlato.css' rel='stylesheet' type='text/css'>
     <link href='assets/css/googlefontmontserrat.css' rel='stylesheet' type='text/css'>
-
     <!-- FontAwesome JS -->
     <script defer src="assets/fontawesome/js/all.js"></script>
-
+    <link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet"> 
+    <!--Intro.Js-->
     <!-- Global CSS -->
+    
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
 
     <!-- github calendar css -->
@@ -59,7 +60,7 @@
                 <div class="col-12 col-md-auto">
                     <div class="dark-mode-switch d-flex">
                         <div class="form-check form-switch mx-auto mx-md-0">
-                            <input type="checkbox" class="form-check-input me-2" id="darkSwitch" />
+                            <input type="checkbox" class="form-check-input me-2" id="darkSwitch"  data-intro='Karanlık mod' />
                             <label class="custom-control-label" for="darkSwitch">Karanlık Mod</label>
                         </div>
                     </div>
@@ -270,6 +271,8 @@
     <!--//footer-->
 
     <!-- Javascript -->
+ 
+    <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
     <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/plugins/vanilla-rss/dist/rss.global.min.js"></script>
@@ -281,6 +284,9 @@
     <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script>
+        introJs().setOption(true).start();
+</script>
 </body>
 
 </html>

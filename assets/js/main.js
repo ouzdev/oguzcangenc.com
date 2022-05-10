@@ -9,3 +9,4 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
     new GitHubCalendar("#github-graph", "ouzdev", { responsive: true });
     GitHubActivity.feed({ username: "ouzdev", selector: "#ghfeed" });
+
