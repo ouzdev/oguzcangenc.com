@@ -293,33 +293,6 @@
     <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
-    <script>
-        var introguide = introJs();
-        introguide.setOption("nextLabel", " İleri ");
-        introguide.setOption("prevLabel", " Geri ");
-        introguide.setOption("doneLabel", " Bitir ");
-
-        
-
-
-        window.addEventListener('load', function () {
-            var doneTour = localStorage.getItem('EventTour') === 'Completed';
-            if (doneTour) {
-                return;
-            }
-            else {
-                introguide.start()
-
-                introguide.oncomplete(function () {
-                    localStorage.setItem('EventTour', 'Completed');
-                });
-
-                introguide.onexit(function () {
-                    localStorage.setItem('EventTour', 'Completed');
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
