@@ -5,7 +5,7 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
+    - name: 🚚 Get latest code 
       uses: actions/checkout@v2
     
     - name: 📂 Sync files
@@ -18,7 +18,6 @@ jobs:
           **/.git*
           **/.git*/**
           **/assets/css**
-          **/assets/fontawesome**
-          **/assets/plugins**
-          **/assets/scss**
+          **/assets/fontawesome/**
+          **/assets/plugins/**
           **/blog/**
