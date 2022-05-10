@@ -17,5 +17,8 @@ jobs:
         exclude: |
           **/.git*
           **/.git*/**
-          **/assets/**
+          **/assets/css**
+          **/assets/fontawesome**
+          **/assets/plugins**
+          **/assets/scss**
           **/blog/**
